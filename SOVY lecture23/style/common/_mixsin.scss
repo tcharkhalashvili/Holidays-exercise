@@ -1,0 +1,80 @@
+@mixin bottons {
+    .botton{
+        font-family: "Inter", Sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 1.6em;
+        letter-spacing: 3.5px;
+        padding: 16px 28px 16px 28px;
+        display: inline-block;
+        border: 1px solid;
+        margin-top: 46px;
+        background-color: $color_dark_orange;
+        border-radius: 5px;
+        a{
+            color: $color_black;
+            font-size: 14px;
+            &:hover{
+                color: white;
+            }
+        }
+        &:hover{
+            color: white;
+            background-color: #DAA76000;
+        }
+    }
+
+}
+@mixin title {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: "Inter", Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    line-height: 3px;
+    color: $color_dark_orange;
+}
+@mixin line {
+    border: 1px solid;
+    width: 50px;
+    height: 0px;
+}
+@mixin special {
+    .title{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: "Inter", Sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        display: grid;
+        grid-template-columns: 1fr 16fr;
+        line-height: 3px;
+        color: $color_dark_orange;
+        .line{
+            border: 1px solid;
+            width: 50px;
+            height: 0px;
+        }
+    }
+    
+}
+@mixin default {
+    font-family: "Raleway", Sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    text-transform: capitalize;
+    line-height: 1.2em;
+    color: $color_white;
+}
+@mixin description {
+    font-family: "Inter", Sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: $color_dark_white;
+}

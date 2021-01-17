@@ -1,0 +1,23 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border-style: none;
+    list-style-type: none;
+    outline-style: none;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container {
+    width: 1280px;
+    margin: auto;
+  
+    @media only screen and (max-width: 1280px) {
+        width: 100%;
+        overflow: hidden;
+    }
+}

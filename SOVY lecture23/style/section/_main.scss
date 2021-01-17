@@ -1,0 +1,892 @@
+/*header*/
+.header{
+    background-image: url("../images/bg-kitchen-wood.jpg");
+    width: 100%;
+    background-position: top center;
+    background-size: cover;
+    background-color: #000000;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+    height: 600px;
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        height: 71px;
+        @media only screen and (max-width: 775px) {
+            padding: 0 20px;
+        }
+        @media only screen and (max-width: 990px) {
+            grid-template-columns: 1fr 1fr;
+            padding: 0 40px;
+           
+        }
+        .logo{
+            img{
+                height: 35px;
+                margin-top: 10px;
+            }
+        }
+
+        ul.nav_bar {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            
+            @media only screen and (max-width: 990px) {
+                display: none;
+               
+            }
+
+            li{
+                padding: 15px 0;
+                position: relative;
+
+                a{
+                    display:block;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: #fff;
+
+                    i{
+                        margin-left:5px;
+                    }
+
+                    .active{
+                        color: $color_dark_orange;
+                    }
+
+                    &:hover{
+                        color: $color_dark_orange;
+                    }
+                }
+
+                
+
+                .dropdown_menu {
+                    display: none;
+                    position: absolute;
+                    background: #000;
+                    min-width: 200px;
+                    z-index: 9999;
+                    top: 40px;
+
+                    li{
+                        padding: 0;
+                        a{
+                            color: #fff;
+                            padding: 10px 15px;
+                            border-bottom: 1px solid #303030;
+
+                            &:hover{
+                                background: #202020;
+                                color: #daa760;
+                            }
+                        }
+                    }
+                }
+
+                &:hover .dropdown_menu{
+                    display: block;
+                }
+            }
+
+        }
+
+        .social{
+            text-align: right;
+            a{
+                padding: 0 10px;
+                color: $color_white;
+                font-size: 16px;
+                &:hover{
+                    color: $color_dark_orange;
+                }
+            }
+        }
+    }
+    .slider{
+        padding: 80px 0;
+        .text {
+            text-align: center;
+            max-width: 63%;
+            margin: 0 auto;
+            .element_icon{
+                margin: 0px 0px 10px 0px;
+                margin-bottom: 30px;
+                i{
+                    font-size: 50px;
+                    color: $color_dark_orange;
+                }    
+                
+            }
+            .description {
+                font-family: "Inter", Sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 15px;
+                color: $color_dark_orange;
+            }
+            .line{
+                position: relative;
+                margin-top: 25px;
+                i{
+                    color: $color_dark_orange;
+                    position: absolute;
+                    left: 0;
+                    top: -6px;
+                    right: 0;
+                }
+                .line_icons{
+                    border: 1px solid;
+                    width: 13%;
+                    margin: 0 auto;
+                    color: $color_dark_orange;
+                }
+            }
+            
+            .title {
+                margin: 0px 0px 38px 0px;
+                padding: 0px 0px 0px 0px;
+                font-family: "Raleway", Sans-serif;
+                font-size: 24px;
+                font-weight: 600;
+                font-style: italic;
+                line-height: 1.9em;
+                color: $color_white;
+            }
+            .botton{
+                font-family: "Inter", Sans-serif;
+                font-weight: 400;
+                text-transform: uppercase;
+                line-height: 1.6em;
+                letter-spacing: 3.5px;
+                padding: 16px 28px 16px 28px;
+                display: inline-block;
+                border: 1px solid;
+                margin-top: 46px;
+                background-color: $color_dark_orange;
+                border-radius: 5px;
+                a{
+                    color: $color_black;
+                    font-size: 14px;
+                    &:hover{
+                        color: white;
+                    }
+                }
+                &:hover{
+                    color: white;
+                    background-color: #DAA76000;
+                }
+                
+            }
+        }
+        
+    }
+    
+}
+/*story*/
+.story{
+    background-color: #130F0C;
+    position: relative;
+    height: 700px;
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .left_story{
+            background-image: url("../images/our-table.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            top: 43px;
+            left: 0;
+            position: absolute;
+            .images{
+                background-image: url("../images/right.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 45px;
+            }
+        }
+    }
+    .item{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 100px;
+        .story_item_img {
+            img{
+                @media only screen and (max-width: 990px) {
+                    left: 44px;
+                }
+                position: absolute;
+                left: 188px;
+                right: 0;
+                transition: transform 1s;
+                &:hover{
+                   /* transform: translate(20px, 20px);*/
+                    transform: translateY(81px);
+                }
+            }
+        }
+        .story_item{
+            padding: 0px 100px 0px 100px;
+            position: relative;
+            .story_title{
+                padding-top: 15px;
+                padding-bottom: 15px;
+                font-family: "Inter", Sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                display: grid;
+                grid-template-columns: 1fr 6fr;
+                line-height: 3px;
+                color: $color_dark_orange;
+                .story_line{
+                    border: 1px solid;
+                    width: 50px;
+                    height: 0px;
+                }
+            }
+            .story_editor{
+                font-family: "Raleway", Sans-serif;
+                font-size: 56px;
+                font-weight: 800;
+                text-transform: capitalize;
+                padding-bottom: 15px;
+                color: $color_white;
+            }
+            .story_description{
+                margin: 0px 0px 45px 0px;
+                font-family: "Inter", Sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                color: $color_dark_white;
+                line-height: 1.5;
+                position: relative;
+            }
+            
+            .story_list{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px;
+                column-gap: 45px;
+                margin-bottom: 35px;
+                span {
+                    padding-left: 10px;
+                    font-family: "Inter", Sans-serif;
+                    font-size: 16px;
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                    color: $color_dark_white;
+                }
+                i{
+                    color: $color_dark_orange;
+                }
+            }
+            .botton{
+                font-family: "Inter", Sans-serif;
+                font-weight: 400;
+                text-transform: uppercase;
+                line-height: 1.6em;
+                letter-spacing: 3.5px;
+                padding: 16px 28px 16px 28px;
+                display: inline-block;
+                border: 1px solid;
+                margin-top: 46px;
+                background-color: $color_dark_orange;
+                border-radius: 5px;
+                a.btn{
+                    color: $color_black;
+                    font-size: 14px;
+                    &:hover{
+                        color: white;
+                    }
+                }
+                &:hover{
+                    color: white;
+                    background-color: #DAA76000;
+                }  
+            }
+           
+        }
+    }
+}
+/*specials*/
+.specials{
+    background-color: #130F0C;
+    padding: 60px 0;
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        @media only screen and (max-width: 990px) {
+            grid-template-columns: 1fr;
+            padding: 0 30px;
+            justify-items: center;
+        }
+        .left_item{
+            .specials_menu_list{
+                padding: 60px 0;
+                .title{
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    font-family: "Inter", Sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    display: grid;
+                    grid-template-columns: 1fr 8fr;
+                    line-height: 3px;
+                    color: $color_dark_orange;
+                    .line{
+                        border: 1px solid;
+                        width: 50px;
+                        height: 0px;
+                    }
+                }
+                .description{
+                    font-family: "Raleway", Sans-serif;
+                    font-size: 56px;
+                    font-weight: 800;
+                    text-transform: capitalize;
+                    line-height: 1.2em;
+                    padding-bottom: 35px;
+                    color: $color_white;
+                }
+                .food_list{
+                    .title_default{
+                        font-family: "Raleway", Sans-serif;
+                        font-size: 20px;
+                        font-weight: 600;
+                        padding-bottom: 20px;
+                        color: $color_white;
+                        span{
+                            color: $color_dark_orange;
+                            margin: 0 10px;
+                        }
+                        span.price{
+                            color: $color_white;
+
+                        }
+                        
+                    }
+                    .widget {
+                        font-family: "Inter", Sans-serif;
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: $color_dark_orange;
+                        padding-bottom: 65px;
+                    }
+                }
+            }
+        }
+        .right_items{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+            
+            .right_item{
+                img{
+                    width: 729px;
+                    height: 400px;
+                    transition: transform 1s;
+                    @media only screen and (max-width: 775px) {
+                        width: 679px;
+                        height: 370px;
+                    }
+                    &:hover{
+                        transform: translate(20px, 20px);
+                     /*   transform: translatex(81px);*/
+                    }
+                }
+            }
+            .right_bottom{
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+                gap: 20px;
+                .bottom{
+                    img{
+                        width: 259px;
+                        height: 300px;
+                        transition: transform 1s;
+                        @media only screen and (max-width: 775px) {
+                            width: 250px;
+                            height: 250px;
+                        }
+                        &:hover{
+                            transform: translate(20px, 20px);
+                         /*   transform: translatex(81px);*/
+                        }
+                    }
+                    
+                }
+                .bottom_img{
+                    img{
+                        width: 433px;
+                        height: 300px;
+                        transition: transform 1s;
+                        @media only screen and (max-width: 775px) {
+                            width: 400px;
+                            height: 250px;
+                        }
+                        &:hover{
+                            transform: translate(20px, 20px);
+                         /*   transform: translatex(81px);*/
+                        }
+                    }
+                    
+                }
+            }
+        
+        }
+    }
+}
+.quality{
+    background-color: #130F0C;
+    padding: 60px 0 10px;
+    .quality_slider{
+        background-image: url("../images/steak-food-recipe-idea.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 450px;
+        width: 100%;
+        background-attachment: fixed;
+        background-color: #0B1315;
+        opacity: 0.6;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        .text{
+            text-align: center;
+            padding-top: 80px;
+            .title{
+                font-family: "Raleway", Sans-serif;
+                font-size: 69px;
+                font-weight: 800;
+                text-transform: capitalize;
+                line-height: 2.2em;
+                color: $color_white;
+            }
+            .icon{
+                i{
+                    color: #ff9501;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+.services{
+    padding: 200px 0px 70px 0px;
+    background-color: #130F0C;
+    position: relative;
+    .services_items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        @media only screen and (max-width: 990px) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+        .all_left{
+
+            .left_item{
+                @media only screen and (max-width: 990px) {
+                    img{
+                        width: 890px;
+                    }
+                }
+                
+                position: relative;
+            }
+            .leaf{
+                
+                img{
+                    position: absolute;
+                    left: 401px;
+                    top: 39px;
+                    width: 409px;
+                    height: 427px;
+                    @media only screen and (max-width: 775px) {
+                        top: 0;
+                        width: 280px;
+                        height: 300px;
+                        left: 260px;
+                    }
+                   
+                }
+            }
+            .rosemary{
+                @media only screen and (max-width: 990px) {
+                    top: 500px;
+                }
+                left: -88px;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+        
+        .right_item{
+            margin: 0px 0px 0px 0px;
+            padding: 0 10px;
+            margin-top: 110px;
+            
+            .text{
+                .right_title{
+                    @include title();
+                    .line{
+                        border: 1px solid;
+                        width: 35px;
+                        height: 0px;
+                    }
+                }
+                .right_default{
+                    padding: 10px 0 25px;
+                    @include default();
+                }
+                .right_description{
+                    padding-bottom: 40px;
+                    @include description();
+                }
+            }
+            .statistics{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+                .statistics_item{
+                    display: grid;
+                    grid-template-columns: 1fr 5fr;
+                    
+                    i{
+                        width: 1em;
+                        height: 1em;
+                        font-size: 58px;
+                        color: $color_dark_orange;
+                    }
+                    .number_foot{
+                        padding-left: 30px;
+                        span.number {
+                            font-family: "Raleway", Sans-serif;
+                            font-size: 40px;
+                            font-weight: 600;
+                            line-height: 1.2em;
+                            margin-bottom: 0px;
+                            color: $color_white;
+                        }
+                        span.super {
+                            vertical-align: top;
+                            font-size: 22px;
+                            color: $color_dark_orange;
+                            position: relative;
+                        }
+                        h3{
+                            font-family: "Inter", Sans-serif;
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height: 1.3em;
+                            color: $color_dark_white;
+                        }
+                    }
+                }
+            }
+            .right_title{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 30px 0;
+                p{
+                    font-family: "Inter", Sans-serif;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 1.7em;
+                    color: $color_dark_white;
+                }
+                a{
+                    font-family: "Inter", Sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.7em;
+                    color: $color_dark_orange;
+                    text-decoration: revert;
+                }
+            }
+            
+        
+        }
+        
+    }
+}
+.history{
+    background-image: url(../images/restaurant-with-beautiful-fireplace.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-color: #000000;
+    background-attachment: fixed;
+    height: 500px;
+    width: 100%;
+    opacity: 0.7;
+    .text{
+        text-align: center;
+        max-width: 52%;
+        margin: 0 auto;
+        padding-top: 70px;
+        .icon{
+            color: $color_dark_orange;
+            font-size: 48px;
+            line-height: 2;
+        }
+        .history_description{
+            color: $color_white;
+            font-family: "Raleway", Sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            font-style: italic;
+            line-height: 1.6em;
+            padding-bottom: 30px;
+        }
+        .history_autor{
+            font-family: "Inter", Sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: $color_dark_orange;
+        }
+    }
+}
+.our_menu{
+    padding: 80px 0px 100px 0px;
+    background-color: #130F0C;
+    .text{
+        @media only screen and (max-width: 990px) {
+            padding: 0 23px;
+        }
+        @include special();
+        
+        .default{
+            padding: 10px 0 25px;
+            @include default();
+        }
+        .description{
+            padding-bottom: 40px;
+            line-height: 1.5;
+            width: 39.073%;
+            max-width: 39.073%;
+            @include description();
+        }
+    }
+    .our_cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        @media only screen and (max-width: 775px) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+        .card{
+            text-align: center;
+            .img{
+                overflow: hidden;
+                img{
+                    transition: transform 0.35s ease-in, -webkit-transform 0.35s ease-in;
+                    border-radius: 5px;
+                    &:hover{
+                        opacity: 0.5;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            
+            .card_title{
+                padding: 40px 0px 0px 0px;
+                font-family: "Raleway", Sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+                line-height: 1.6em;
+                letter-spacing: 1.2px;
+                color: $color_dark_orange;
+                margin-bottom: 10px;
+            }
+            .card_description{
+                font-family: "Inter", Sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                color: $color_dark_white;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
+}
+.reserve{
+    background-image: url(../images/interior-view-ofa-city-restaurant-.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 540px;
+    width: 100%;
+    opacity: 0.8;
+    display: grid;
+   
+    .reserve_items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        
+        .item{
+            padding: 0px 100px 0px 0px;
+            align-items: center;
+            justify-content: center;
+            display: grid;
+            @media only screen and (max-width: 990px) {
+                padding: 0 30px;
+            }
+            .text{
+                             
+                @include special();
+                .default{
+                    padding: 10px 0 25px;
+                    @include default();
+                }
+                .description{
+                    padding-bottom: 40px;
+                    line-height: 1.5;
+                    @include description();
+                }
+            }
+
+        }
+        .right_item{
+            align-items: center;
+            justify-content: center;
+            display: grid;
+            .botton{
+                font-family: "Inter", Sans-serif;
+                font-weight: 400;
+                text-transform: uppercase;
+                line-height: 1.6em;
+                letter-spacing: 3.5px;
+                border-style: solid;
+                border-width: 2px 2px 2px 2px;
+                border-color: #D29A5A00;
+                padding: 16px 32px 16px 32px;
+                display: inline-block;
+                background-color: #DAA760;
+                
+                a{
+                    font-size: 14px;
+                    color: $color_black;
+                    &:hover{
+                        color:$color_dark_white;
+                    }    
+                }
+                &:hover{
+                    color: #fff;
+                    background-color: #02010100;
+                    border-color:$color_dark_white;
+                }
+            }
+            
+        }   
+          
+    }
+}
+.contact{
+    padding: 100px 0px 100px 0px;
+    background-color: #130F0C;
+    border-bottom: 1px solid #ccc;
+    border-color: #F8F8F80D;
+    .contact_items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        @media only screen and (max-width: 990px) {
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 30px;
+            padding: 0 40px;
+        }
+        .item{
+            .info_box{
+                display: grid;
+                grid-template-columns: 1fr 4fr;
+                .icon{
+                    i{
+                        font-size: 40px;
+                        color: $color_dark_orange;
+                        &:hover{
+                            color: #ff9501;
+                        }
+                    }
+                    
+                }
+                .description{
+                    font-family: "Inter", Sans-serif;
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: $color_dark_white;
+                }
+            }
+        }
+    }
+}
+.footer{
+    padding: 140px 0px 80px 0px;
+    background-color: #130F0C;
+    .footer_logo{
+        margin-bottom: 20px;
+        text-align: center;
+        img{
+            width: 130px;
+            margin: 0px 0px 10px 0px;
+        }
+    }
+    .link{
+        margin-bottom: 20px;
+        text-align: center;
+        a{
+            padding: 22px;
+            color: $color_dark_orange;
+            line-height: 2.5em;
+            font-family: "Inter", Sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            &:hover{
+                color: $color_white;
+            }
+        }
+    }
+    .copyright{
+        padding: 0px 0px 20px 0px;
+        text-align: center;
+        font-family: "Inter", Sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        color: $color_dark_white;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .container{
+        width: 100%;
+        overflow: hidden;
+    }
+    .header{
+        .menu {
+            display: none;
+        }
+        .icon{
+            justify-self: end;
+        }
+    }
+}    
